@@ -7,11 +7,9 @@ cabal-version: 1.12
 name:           GameOfLife
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/GameOfLife#readme>
-homepage:       https://github.com/githubuser/GameOfLife#readme
-bug-reports:    https://github.com/githubuser/GameOfLife/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2023 Author name here
+author:         Artemii Miasoedov, Arthur Rakhmetov
+maintainer:     a.miasoedov@innopolis.university
+copyright:      2023 Artemii Miasoedov, Arthur Rakhmetov
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -19,46 +17,14 @@ extra-source-files:
     README.md
     CHANGELOG.md
 
-source-repository head
-  type: git
-  location: https://github.com/githubuser/GameOfLife
-
-library
-  exposed-modules:
-      Lib
-  other-modules:
-      Paths_GameOfLife
-  hs-source-dirs:
-      src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
-  build-depends:
-      base >=4.7 && <5
-    , gloss >=1.13
-  default-language: Haskell2010
-
 executable GameOfLife-exe
   main-is: Main.hs
   other-modules:
       Paths_GameOfLife
   hs-source-dirs:
-      app
+      src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      GameOfLife
-    , base >=4.7 && <5
-    , gloss >=1.13
-  default-language: Haskell2010
-
-test-suite GameOfLife-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_GameOfLife
-  hs-source-dirs:
-      test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      GameOfLife
-    , base >=4.7 && <5
+      base >=4.7 && <5
     , gloss >=1.13
   default-language: Haskell2010

@@ -1,10 +1,9 @@
 name:                GameOfLife
 version:             0.1.0.0
-github:              "githubuser/GameOfLife"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2023 Author name here"
+author:              "Artemii Miasoedov, Arthur Rakhmetov"
+maintainer:          "a.miasoedov@innopolis.university"
+copyright:           "2023 Artemii Miasoedov, Arthur Rakhmetov"
 
 extra-source-files:
 - README.md
@@ -34,27 +33,11 @@ ghc-options:
 - -Wpartial-fields
 - -Wredundant-constraints
 
-library:
-  source-dirs: src
-
 executables:
   GameOfLife-exe:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         src
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    dependencies:
-    - GameOfLife
-
-tests:
-  GameOfLife-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - GameOfLife
